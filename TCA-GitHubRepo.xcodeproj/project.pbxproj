@@ -11,6 +11,9 @@
 		FB29E8142A95073200F4FD70 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29E8132A95073200F4FD70 /* ContentView.swift */; };
 		FB29E8162A95073300F4FD70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB29E8152A95073300F4FD70 /* Assets.xcassets */; };
 		FB29E8192A95073300F4FD70 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB29E8182A95073300F4FD70 /* Preview Assets.xcassets */; };
+		FBDA86B12A9669B400856638 /* CombineSchedulers in Frameworks */ = {isa = PBXBuildFile; productRef = FBDA86B02A9669B400856638 /* CombineSchedulers */; };
+		FBDA86B42A9669E900856638 /* CasePaths in Frameworks */ = {isa = PBXBuildFile; productRef = FBDA86B32A9669E900856638 /* CasePaths */; };
+		FBDA86B72A966AE200856638 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = FBDA86B62A966AE200856638 /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBDA86B12A9669B400856638 /* CombineSchedulers in Frameworks */,
+				FBDA86B42A9669E900856638 /* CasePaths in Frameworks */,
+				FBDA86B72A966AE200856638 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +89,11 @@
 			dependencies = (
 			);
 			name = "TCA-GitHubRepo";
+			packageProductDependencies = (
+				FBDA86B02A9669B400856638 /* CombineSchedulers */,
+				FBDA86B32A9669E900856638 /* CasePaths */,
+				FBDA86B62A966AE200856638 /* ComposableArchitecture */,
+			);
 			productName = "TCA-GitHubRepo";
 			productReference = FB29E80E2A95073200F4FD70 /* TCA-GitHubRepo.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,11 @@
 				Base,
 			);
 			mainGroup = FB29E8052A95073100F4FD70;
+			packageReferences = (
+				FBDA86AF2A9669B400856638 /* XCRemoteSwiftPackageReference "combine-schedulers" */,
+				FBDA86B22A9669E900856638 /* XCRemoteSwiftPackageReference "swift-case-paths" */,
+				FBDA86B52A966AE200856638 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = FB29E80F2A95073200F4FD70 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -339,6 +355,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FBDA86AF2A9669B400856638 /* XCRemoteSwiftPackageReference "combine-schedulers" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/combine-schedulers";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		FBDA86B22A9669E900856638 /* XCRemoteSwiftPackageReference "swift-case-paths" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-case-paths";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		FBDA86B52A966AE200856638 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FBDA86B02A9669B400856638 /* CombineSchedulers */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBDA86AF2A9669B400856638 /* XCRemoteSwiftPackageReference "combine-schedulers" */;
+			productName = CombineSchedulers;
+		};
+		FBDA86B32A9669E900856638 /* CasePaths */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBDA86B22A9669E900856638 /* XCRemoteSwiftPackageReference "swift-case-paths" */;
+			productName = CasePaths;
+		};
+		FBDA86B62A966AE200856638 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBDA86B52A966AE200856638 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FB29E8062A95073100F4FD70 /* Project object */;
 }
